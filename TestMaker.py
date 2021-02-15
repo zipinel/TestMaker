@@ -24,7 +24,8 @@ qdb = [Q1,Q2]
 while True:
 	n = random.choice(qdb)
 	print(n)
-	userInput = input()
+	rawInput = input()
+	userInput = rawInput.lower()
 	if userInput == 'a':
 		userInput = n.a
 	elif userInput == 'b':
