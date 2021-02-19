@@ -19,23 +19,26 @@ class Question:
 	def __str__(self):					#### function used to return QUESTION with answers as a string
 		return '{}\n{}\n{}\n{}\n{}\n{}\n'.format(self.que,self.a,self.b,self.c,self.d,self.e)
 
+	
 ### When you enter questions if you leave an empty string at answers it will show only the answers entered. 
 ### Just remember to use last arguement as index that points out to the correct answer
 ### Replace the text and add more questions as the same format right below
-Q1 = Question('\n1. Text for the Question 1\n','B. Text for answer option.','C. Text for answer option.','D. Text for answer option.','E. Text for answer option..',0)
-Q2 = Question('\n2. Text for the Question 2\n','A. Text for answer option.','B. Text for answer option.','Text for answer option.','','',0)
+Q1 = Question('\n1. Text for the Question 1\n','A. Text for CORRECT answer option.','B. Text for answer option.','C. Text for answer option.','D. Text for answer option.','E. Text for answer option.',0)
+Q2 = Question('\n2. Text for the Question 2\n','A. Text for answer option.','B. Text for answer option.','C. Text for CORRECT answer option.','','',2)
 
 ### Each question from above should also be added to this list qdb. This list will be later used to randomize the order
 qdb = [Q1,Q2]
+
+
 
 while True:                       ### just an endless loop so you can stop whenever you want
 	n = random.choice(qdb)	  ### this will randomize the order of the questions you will receive
 	print(n)
 	rawInput = input()
-	userInput = rawInput.lower() 	### this kills the bug if you enter the letter for the answer in either capital letters or lower. It will work for both ways
-	if userInput == 'a':		### this will let you answer with options like a, b, c, d, e instead of writting the whole answer
-		userInput = n.a
-	elif userInput == 'b':
+	userInput = rawInput.lower() 	### this kills the bug if you enter the letter for the answer in either
+	if userInput == 'a':		### capital letters or lower. It will work for both ways
+		userInput = n.a		### this will let you answer with options like a, b, c, d, e instead of 
+	elif userInput == 'b':		### writting the whole answer
 		userInput = n.b
 	elif userInput == 'c':
 		userInput = n.c
