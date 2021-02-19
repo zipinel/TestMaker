@@ -1,4 +1,4 @@
-### A local, inside python, without database or external actions, test maker that will let you introduce questions
+### A local, to be used in python terminal, without database or external actions, test maker that will let you introduce questions
 ### and answers to be used by yourself to practice for an exam (driving exam or any abc like quiz)
 ### It will ask you for an answer from a to e and provide the correct answer if you get it wrong.
 ### It's a single option answer.
